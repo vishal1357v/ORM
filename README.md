@@ -1,5 +1,5 @@
 # Ex02 Django ORM Web Application
-## Date: 
+## Date: 15-09-2025
 
 ## AIM
 To develop a Django application to store and retrieve data from Movies Database using Object Relational Mapping(ORM).
@@ -23,7 +23,10 @@ Enter the code for admin.py and models.py
 Execute Django admin and create details for 10 books
 
 ## PROGRAM
-'''
+```
+
+models.py
+
 from django.contrib import admin
 from .models import Movies, MoviesAdmin
 admin.site.register(Movies,MoviesAdmin)
@@ -38,6 +41,12 @@ class Movies(models.Model):
  
 class MoviesAdmin(admin.ModelAdmin):
     list_display=('M_ID','M_name','Release_date','Director', 'Actors')
+
+admin.py
+
+from django.contrib import admin
+from .models import Movies, MoviesAdmin
+admin.site.register(Movies,MoviesAdmin)
 
 '''
 ## OUTPUT
